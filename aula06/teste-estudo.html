@@ -9,12 +9,18 @@
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             background-color: purple;
             color: white;
+            line-height: 1.5em;
         }
-        script {
-            background-color: rgb(54, 0, 54);
+        .mensagem {
+            margin: auto;
+            background-color: rgb(45, 0, 45);
+            width: 80vw;
             color: yellow;
-            padding: 10px;
-            border: 1px solid white;
+            padding: 50px;
+            border: 2px solid white;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.385);
+            text-align: center;
         }
     </style>
 </head>
@@ -29,8 +35,11 @@
         var comprimentoSemEspaçosSobrenome = sobrenome.replace(/\s/g, "").length
         var soma = Number(comprimentoSemEspaçosNome) + Number(comprimentoSemEspaçosSobrenome)
         window.alert(`Bem vindo(a) ${nome}!`)
-        document.write(`Seu nome completo é ${nome} ${sobrenome}. Seu nome tem ${comprimentoSemEspaçosNome} letras, e seu sobrenome tem ${comprimentoSemEspaçosSobrenome}.<br>`)
-        document.write(`A soma de caracteres no seu nome completo é de ${soma} letras.`)
+
+        var mensagem = document.createElement("div")
+        mensagem.classList.add("mensagem")
+        mensagem.innerHTML = `Seu nome completo é <strong>${nome}</strong> <strong>${sobrenome}</strong>.<br>Seu nome tem ${comprimentoSemEspaçosNome} letras, e seu sobrenome tem ${comprimentoSemEspaçosSobrenome}.<br>A soma de caracteres no seu nome completo é de ${soma} letras.`
+        document.body.appendChild(mensagem)
     </script>
 </body>
 </html>
