@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pondo em Prática</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: purple;
+            color: white;
+        }
+        script {
+            background-color: rgb(54, 0, 54);
+            color: yellow;
+            padding: 10px;
+            border: 1px solid white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pondo em Prática</h1>
+    <p>Chegou a hora de pôr em prática o que aprendi até aqui. Vamos ver os comandos funcionando! :)</p>
+
+    <script>
+        var nome = window.prompt('Qual é o seu nome? ')
+        var sobrenome = window.prompt('E o seu sobrenome? ')
+        var comprimentoSemEspaçosNome = nome.replace(/\s/g, "").length
+        var comprimentoSemEspaçosSobrenome = sobrenome.replace(/\s/g, "").length
+        var soma = Number(comprimentoSemEspaçosNome) + Number(comprimentoSemEspaçosSobrenome)
+        window.alert(`Bem vindo(a) ${nome}!`)
+        document.write(`Seu nome completo é ${nome} ${sobrenome}. Seu nome tem ${comprimentoSemEspaçosNome} letras, e seu sobrenome tem ${comprimentoSemEspaçosSobrenome}.<br>`)
+        document.write(`A soma de caracteres no seu nome completo é de ${soma} letras.`)
+    </script>
+</body>
+</html>
