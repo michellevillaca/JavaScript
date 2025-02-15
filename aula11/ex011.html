@@ -16,14 +16,15 @@
         </div>
 
         <script>
-            var país = window.document.getElementById('txtnac')
-            var res = window.document.getElementById('res')
-            if (país != 'Brasil') {
-                res.innerHTML += `<p>Você nasceu em ${país}. Você é estrangeiro!</p>`
-            } else {
-                res.innerHTML += `<p>Você nasceu em ${país}. Você é brasileiro!</p>`
-            }
-
+            function verificar() {
+                var país = window.document.getElementById('txtnac')
+                var res = window.document.getElementById('res')
+                if (país != 'Brasil') {
+                    res.innerHTML += `<p>Você nasceu em ${país}. Você é estrangeiro!</p>`
+                } else {
+                    res.innerHTML += `<p>Você nasceu em ${país}. Você é brasileiro!</p>`
+                }
+        }
         </script>
     </p>
 </body>
