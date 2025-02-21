@@ -1,12 +1,25 @@
+@charset "UTF-8";
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: rgb(245, 127, 37);
+    background-color: rgb(44, 196, 160);
     font: normal 15pt;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    line-height: 35px;
+    text-align: center;
 }
 
 header {
     color: white;
     text-align: center;
+    padding: 10px;
 }
 
 section {
@@ -16,6 +29,30 @@ section {
     width: 500px;
     margin: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.293);
+}
+
+input[type=number] {
+    background-color: rgba(0, 94, 255, 0.299);
+    font-size: 1em;
+    height: 91%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+input[type=button] {
+    font-size: 0.9em;
+    width: 25%;
+    height: 30px;
+    background-color: rgb(0, 94, 255);
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+input[type=button]:hover {
+    background-color: rgb(5, 46, 117);
 }
 
 footer {
