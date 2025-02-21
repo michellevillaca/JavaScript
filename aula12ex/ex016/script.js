@@ -27,6 +27,7 @@ function verificar() {
                 img.setAttribute('src', 'homemadulto.png')
             } else {
                 //Idoso
+                img.setAttribute('src', 'homemidoso.png')
             }
         } else if (fsex[1].checked) { //aqui eu poderia colocar apenas 'else', mas colocamos 'else if' só para garantir e explicitar.
             gênero = 'Mulher'
@@ -44,10 +45,11 @@ function verificar() {
                 img.setAttribute('src', 'mulheradulta.png')
             } else {
                 //Idoso
+                img.setAttribute('src', 'mulheridosa.png')
             }
         }
         res.style.textAlign = 'center' //centralizando texto em JS
-        res.innerHTML = `Detectamos ${gênero} com ${idade} anos.`
+        res.innerHTML = `Detectamos ${gênero} com ${idade} anos.<br>`
         res.appendChild(img)
     }
 }
