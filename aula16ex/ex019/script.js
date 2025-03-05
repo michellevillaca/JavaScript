@@ -3,6 +3,12 @@ let lista = document.querySelector('select#flista')
 let res = document.querySelector('div#res')
 let valores = []
 
+num.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        adicionar()
+    }
+})
+
 function isNumber(n) {
     if(Number(n) >=1 && Number(n) <= 100) {
         return true
@@ -28,4 +34,6 @@ function adicionar() {
     } else {
         window.alert('Valor inválido ou já encontrado na lista.')
     }
+    num.value = ''
+    num.focus() //função para não precisar clicar na barrinha de adicionar número toda vez. (Automatização)
 }
