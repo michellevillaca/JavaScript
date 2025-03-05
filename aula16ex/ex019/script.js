@@ -1,19 +1,28 @@
-let num = document.getElementById('txtnum')
-let tab = document.getElementById('seltab')
-let res = document.getElementById('res')
+let num = document.querySelector('input#fnum')
+let lista = document.querySelector('select#flista')
+let res = document.querySelector('div#res')
 let valores = []
 
-function adicionar() {
-    let n = Number(num.value)
-    if (n > 100 || n < 0 || num.value.length == 0) {
-        window.alert('ERRO! Por favor, digite um número válido.')
+function isNumber(n) {
+    if(Number(n) >=1 && Number(n) <= 100) {
+        return true
     } else {
-        let item = document.createElement('option')
-        item.text = `Valor ${n} adicionado.`
-        tab.appendChild(item)
+        return false
     }
 }
 
-function finalizar() {
-    res.innerHTML = `Saudações`
+function inLista(n, l) {
+    if (l.indexOf(Number(n)) != -1) { //-1 indica que o valor não foi encontrado na lista
+        return true
+    } else {
+        return false
+    }
+}
+
+function adicionar() {
+    if(isNumber(num.value) && !inLista(num.value, valores)) {
+        window.alert('Tudo OK')
+    } else {
+        window.alert('Valor inválido ou já encontrado na lista.')
+    }
 }
