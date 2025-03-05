@@ -20,8 +20,11 @@ function inLista(n, l) {
 }
 
 function adicionar() {
-    if(isNumber(num.value) && !inLista(num.value, valores)) {
-        window.alert('Tudo OK')
+    if(isNumber(num.value) && !inLista(num.value, valores)) { //se for um número (válido) e se ele não estiver na lista, então eu posso prodsseguir.
+        valores.push(Number(num.value))
+        let item = document.createElement('option')
+        item.text = `Valor ${num.value} adicionado.`
+        lista.appendChild(item)
     } else {
         window.alert('Valor inválido ou já encontrado na lista.')
     }
