@@ -8,3 +8,9 @@ function parimpar(n) {
 
 let res = parimpar(4)
 console.log(res)
+
+/*
+Posso fazer direto, sem criar a variável:
+
+console.log(parimpar(4))
+*/
