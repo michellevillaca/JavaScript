@@ -20,9 +20,18 @@
                 <br>
                 Sexo: <input type="radio" name="fsexo" id="masc"><label for="masc">Masculino</label>
                 <input type="radio" name="fsexo" id="fem"><label for="fem">Feminino</label>
+                <br>
+                Peso: <input type="number" name="fpeso" id="fpeso"style="width: 60px;">
+                <br>
+                <input type="button" value="Cadastrar" onclick="cadastrar()">
+            </p>
+            <p>
+                <select name="flista" id="flista" size="6" style="width: 300px"></select>
+                <br>
+                <input type="button" value="Finalizar" onclick="finalizar">
             </p>
         </div>
-        <div>
+        <div id="res">
 
         </div>
     </section>
